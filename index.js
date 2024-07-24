@@ -11,7 +11,7 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
-const port = 3111;
+const port = process.env.PORT || 3111;
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
