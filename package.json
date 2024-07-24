@@ -1,0 +1,12 @@
+{
+  "name": "chat-room-app",
+  "type": "module",
+  "dependencies": {
+    "express": "latest",
+    "nodemon": "latest",
+    "socket.io": "latest"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
