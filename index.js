@@ -9,7 +9,14 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const httpServer = createServer(app);
-const io = new Server(httpServer);
+const io = new Server(httpServer, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  },
+  allowEIO3: true,
+  pingTimeout: 60000
+});
 
 const port = process.env.PORT || 3111;
 
